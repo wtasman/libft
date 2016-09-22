@@ -5,18 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: wasman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/22 16:12:54 by wasman            #+#    #+#             */
-/*   Updated: 2016/09/22 16:53:19 by wasman           ###   ########.fr       */
+/*   Created: 2016/09/22 16:34:02 by wasman            #+#    #+#             */
+/*   Updated: 2016/09/22 16:50:47 by wasman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int c)
+int ft_isalpha(int c)
 {
-	if (c < '0' or c > '9')
-		return (0);
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+		return (1);
 	else
-		return(1);
+		return(0);
 }
-
