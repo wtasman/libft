@@ -33,7 +33,7 @@ all: $(NAME)
 build: $(NAME) $(TEST)
 
 $(NAME):
-	$(CC) $(CFLAGS) $(SOURCES) -I$(IDIR)
+	$(CC) $(CFLAGS) $(SOURCES)
 	$(BLDLIB) $(NAME) $(OBJ)
 	$(SORT) $(NAME)
 
