@@ -6,21 +6,27 @@
 /*   By: wasman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/22 20:58:27 by wasman            #+#    #+#             */
-/*   Updated: 2016/09/23 00:53:18 by wasman           ###   ########.fr       */
+/*   Updated: 2016/09/23 15:53:59 by wasman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int main()
+void	test_printables(void)
 {
 	char c;
-
-	char = 40;
-	while (c <= 176)
+	
+	c = ' ';
+	while (c <= '~')
 	{
 		ft_putchar(c);
 		ft_putchar('\n');
+		c++;
 	}
+}
+
+int main()
+{
+	test_printables();
 	return (0);
 }
