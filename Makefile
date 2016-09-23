@@ -15,10 +15,6 @@ NAME = libft.a
 BLDLIB = ar rc
 SORT = ranlib
 
-IDIR = ./includes/
-SRCDIR = ./srcs/
-MAINDIR = ./mains/
-
 SOURCES =	ft_putchar.c\
 			ft_putstr.c\
 			ft_putnbr.c\
@@ -30,12 +26,7 @@ SOURCES =	ft_putchar.c\
 			ft_isspaces.c\
 			ft_putendl.c\
 
-MAINS = mains/ft_putchar_main.c\
-		mains/ft_putstr_main.c\
-
 OBJ =	$(SOURCES:.c=.o)
-
-EXEXS = $(SOURCES:.c=)
 
 all: $(NAME)
 
