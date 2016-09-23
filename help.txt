@@ -1,0 +1,4 @@
+http://www.cs.toronto.edu/~penny/teaching/csc444-05f/maketutorial.html
+https://github.com/CppCon/CppCon2015
+https://www.youtube.com/watch?v=Y8YVSohnlgY
+https://www.youtube.com/watch?v=y8-17FyYesM

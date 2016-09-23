@@ -30,16 +30,10 @@ OBJ =	$(SOURCES:.c=.o)
 
 all: $(NAME)
 
-build: $(NAME) $(TEST)
-
 $(NAME):
 	$(CC) $(CFLAGS) $(SOURCES)
 	$(BLDLIB) $(NAME) $(OBJ)
 	$(SORT) $(NAME)
-
-$(TEST):
-	$(CC) $(CFLAGS) $(MAINS)
-	$(CC) -o $(OBJ) $(MAINS) 
 
 clean:
 	/bin/rm -f $(OBJ)
