@@ -21,6 +21,14 @@ MAINDIR = ./mains/
 
 SOURCES =	ft_putchar.c\
 			ft_putstr.c\
+			ft_putnbr.c\
+			ft_isalnum.c\
+			ft_isalpha.c\
+			ft_isascii.c\
+			ft_isdigit.c\
+			ft_isprint.c\
+			ft_isspaces.c\
+			ft_putendl.c\
 
 MAINS = mains/ft_putchar_main.c\
 		mains/ft_putstr_main.c\
