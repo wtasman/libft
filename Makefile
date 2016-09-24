@@ -27,7 +27,12 @@ SOURCES =	ft_putchar.c\
 			ft_putendl.c\
 			ft_toupper.c\
 			ft_tolower.c\
-			ft_strlen.c
+			ft_strlen.c\
+			ft_putstr_fd.c\
+			ft_putchar_fd.c\
+			ft_putendl_fd.c\
+			ft_putnbr_fd.c
+
 
 OBJ =	$(SOURCES:.c=.o)
 
@@ -42,6 +47,9 @@ $(NAME):
 
 build: all
 	$(CC) $(CFLAGS) $(NAME)
+
+norm: fclean
+	norminette $(SOURCES)
 
 testit: all build
 	./a.out
