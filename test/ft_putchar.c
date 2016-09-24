@@ -6,7 +6,7 @@
 /*   By: wasman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/22 20:58:27 by wasman            #+#    #+#             */
-/*   Updated: 2016/09/23 15:53:59 by wasman           ###   ########.fr       */
+/*   Updated: 2016/09/24 00:12:29 by wasman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ void	test_printables(void)
 	while (c <= '~')
 	{
 		ft_putchar(c);
-		ft_putchar('\n');
 		c++;
 	}
+	ft_putchar('\n');
 }
 
 int main()

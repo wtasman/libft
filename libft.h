@@ -6,7 +6,7 @@
 /*   By: wasman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 09:25:16 by wasman            #+#    #+#             */
-/*   Updated: 2016/09/23 15:33:39 by wasman           ###   ########.fr       */
+/*   Updated: 2016/09/24 01:41:59 by wasman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,8 @@ int		ft_isdigit(int c);
 int		ft_isprint(int c);
 int		ft_isspaces(int c);
 void	ft_putendl(char const *s);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
+size_t	ft_strlen(const char *s);
 
 #endif

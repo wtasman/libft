@@ -5,15 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: wasman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/21 16:24:55 by wasman            #+#    #+#             */
-/*   Updated: 2016/09/24 00:22:26 by wasman           ###   ########.fr       */
+/*   Created: 2016/09/23 16:19:31 by wasman            #+#    #+#             */
+/*   Updated: 2016/09/23 16:26:48 by wasman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char const *s)
+void	test_ft_putstr(void)
 {
-	while (*s)
-		ft_putchar(*s++);
+	char	str[] = "What is this string crap";
+	ft_putstr(str);
+}
+
+int	main()
+{
+	test_ft_putstr();
+	ft_putchar('\n');
+	return (0);
 }

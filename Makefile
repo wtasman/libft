@@ -25,6 +25,9 @@ SOURCES =	ft_putchar.c\
 			ft_isprint.c\
 			ft_isspaces.c\
 			ft_putendl.c\
+			ft_toupper.c\
+			ft_tolower.c\
+			ft_strlen.c
 
 OBJ =	$(SOURCES:.c=.o)
 
@@ -38,15 +41,18 @@ $(NAME):
 	$(SORT) $(NAME)
 
 build: all
-	$(CC) $(CFLAGS) $(NAME) $(TESTS)
+	$(CC) $(CFLAGS) $(NAME)
 
-testit:
+testit: all build
 	./a.out
 
-clean:
+clean: all
 	/bin/rm -f $(OBJ)
 
-fclean: clean
+clr:
+	/bin/rm -rf a.out
+
+fclean: clean clr
 	/bin/rm -f rm $(NAME)
 
 re: fclean all

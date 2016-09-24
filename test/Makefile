@@ -6,7 +6,7 @@
 #    By: wasman <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/23 00:54:09 by wasman            #+#    #+#              #
-#    Updated: 2016/09/23 16:00:28 by wasman           ###   ########.fr        #
+#    Updated: 2016/09/23 17:04:17 by wasman           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,14 +15,17 @@ CFLAGS = -Wall -Wextra -Werror
 NAME = test.c
 LIBH = libft.h
 
-SOURCES = test_ft_putchar.c\
+SOURCES = ft_putchar.c\
+		  ft_putstr.c\
 
 OBJ = $(SOURCES:.c=.o)
+
+FUNC = ~/libft/$(SOURCES)
 
 all: $(NAME)
 
 $(NAME):
-	$(CC) $(CFLAGS) $(SOURCES) $(LIBH) -o $(NAME)
+	$(CC) $(CFLAGS) $(SOURCES) $(FUNC)
 	
 clean:
 	/bin/rm -f $(OBJ)
