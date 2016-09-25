@@ -1,34 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isspaces.c                                      :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wasman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/24 19:09:04 by wasman            #+#    #+#             */
-/*   Updated: 2016/09/25 10:18:50 by wasman           ###   ########.fr       */
+/*   Created: 2016/09/25 09:27:43 by wasman            #+#    #+#             */
+/*   Updated: 2016/09/25 09:43:25 by wasman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void test_ft_isspaces()
+void	test_ft_putchar_fd(void)
 {
-	int	i;
-
-	i = 0;
-	char	str[] = "\n \t \v \f \rIpromisethishadallthespaces";
-	while (ft_isspaces(str[i]))
-		i++;
-	while(str[i] != '\0')
-	{
-		ft_putchar(str[i]);
-		i++;
-	}
+	ft_putchar_fd('c', 1);
 }
 
 int	main()
 {
-	test_ft_isspaces();
+	test_ft_putchar_fd();
 	return (0);
 }
