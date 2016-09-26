@@ -32,7 +32,9 @@ SOURCES =	ft_putchar.c\
 			ft_putchar_fd.c\
 			ft_putendl_fd.c\
 			ft_putnbr_fd.c\
-			ft_atoi.c
+			ft_atoi.c\
+			ft_swap.c\
+			ft_strrev.c
 
 OBJ =	$(SOURCES:.c=.o)
 
