@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wasman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/25 10:40:13 by wasman            #+#    #+#             */
-/*   Updated: 2016/09/25 22:30:22 by wasman           ###   ########.fr       */
+/*   Created: 2016/09/25 22:32:39 by wasman            #+#    #+#             */
+/*   Updated: 2016/09/25 22:40:49 by wasman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	test_ft_isdigit(void)
+void	test_ft_isalnum(void)
 {
 	int	i;
 
 	i = 0;
-	char	str[] = "23901234567890908327the1re3we4rea6buncho7fnu8mb8ers";
+	char	str[] = "I gu\tess t\nhis is \fthe op\vposite of ft_is\rspaces1234567890";
 	while (str[i] != '\0')
 	{
-		if (ft_isdigit(str[i]))
-			i++;
-		else
-		{	
+		if (ft_isalnum(str[i]))
+		{
 			ft_putchar(str[i]);
 			i++;
 		}
+		else
+			i++;
 	}
 }
 
 int	main()
 {
-	test_ft_isdigit();
-	return(0);
+	test_ft_isalnum();
+	return (0);
 }

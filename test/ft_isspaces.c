@@ -6,7 +6,7 @@
 /*   By: wasman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/24 19:09:04 by wasman            #+#    #+#             */
-/*   Updated: 2016/09/25 10:18:50 by wasman           ###   ########.fr       */
+/*   Updated: 2016/09/25 22:21:12 by wasman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,16 @@ void test_ft_isspaces()
 	int	i;
 
 	i = 0;
-	char	str[] = "\n \t \v \f \rIpromisethishadallthespaces";
-	while (ft_isspaces(str[i]))
-		i++;
+	char	str[] = "\n \t \v \f \rI promise this had all the spaces";
 	while(str[i] != '\0')
 	{
-		ft_putchar(str[i]);
-		i++;
+		if (ft_isspaces(str[i]))
+			i++;
+		else
+		{
+			ft_putchar(str[i]);
+			i++;
+		}
 	}
 }
 
