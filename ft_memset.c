@@ -6,7 +6,7 @@
 /*   By: wasman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/26 00:19:55 by wasman            #+#    #+#             */
-/*   Updated: 2016/09/26 01:50:44 by wasman           ###   ########.fr       */
+/*   Updated: 2016/09/26 11:48:54 by wasman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ void	*ft_memset(void *b, int c, size_t len)
 	size_t	i;
 
 	i = 0;
-	b = (unsigned char*)b;
+	unsigned char *nb = (unsigned char*)b;
 	while (i < len)
 	{
-		b[i] = c;
+		nb[i] = c;
 		i++;
 	}
 	ft_putendl(b);

@@ -37,12 +37,14 @@ SOURCES =	ft_putchar.c\
 			ft_strrev.c\
 			ft_putend.c\
 			ft_memset.c\
-			ft_memove.c\
+			ft_memmove.c\
 			ft_memcpy.c
 
 OBJ =	$(SOURCES:.c=.o)
 
 TESTS = test/$(SOURCES)
+
+.PHONY: all build norm testit clean clr fclean re
 
 all: $(NAME)
 

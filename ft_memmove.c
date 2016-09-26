@@ -6,7 +6,7 @@
 /*   By: wasman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/26 01:33:13 by wasman            #+#    #+#             */
-/*   Updated: 2016/09/26 01:45:22 by wasman           ###   ########.fr       */
+/*   Updated: 2016/09/26 11:48:23 by wasman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,5 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		ndst[i] = nsrc[i];
 		i++;
 	}
+	return (dst);
 }

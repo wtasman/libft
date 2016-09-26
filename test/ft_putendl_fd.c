@@ -6,7 +6,7 @@
 /*   By: wasman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/24 11:59:18 by wasman            #+#    #+#             */
-/*   Updated: 2016/09/25 10:05:25 by wasman           ###   ########.fr       */
+/*   Updated: 2016/09/26 11:20:52 by wasman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 void	test_ft_putendl_fd(void)
 {
 	char	str[] = "There have better be a newline";
-
 	ft_putendl_fd(str, 1);
 }
 

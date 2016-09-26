@@ -6,7 +6,7 @@
 /*   By: wasman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 09:25:16 by wasman            #+#    #+#             */
-/*   Updated: 2016/09/26 01:51:52 by wasman           ###   ########.fr       */
+/*   Updated: 2016/09/26 11:30:13 by wasman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ void	ft_putnbr_fd(int n, int fd);
 int		ft_atoi(const char *s);
 void	ft_swap(char *a, char *b);
 char	*ft_strrev(char *s);
-char	*ft_putend(char *s);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memset(void *b, int c, size_t len);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
