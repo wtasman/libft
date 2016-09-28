@@ -42,8 +42,13 @@ SOURCES =	ft_putchar.c\
 			ft_bzero.c\
 			ft_memccpy.c\
 			ft_memchr.c\
-			ft_memcmp.c
-
+			ft_memcmp.c\
+			ft_memalloc.c\
+			ft_strdup.c\
+			ft_strcmp.c\
+			ft_strcpy.c\
+			ft_strncmp.c\
+			ft_strncpy.c
 
 OBJ =	$(SOURCES:.c=.o)
 
