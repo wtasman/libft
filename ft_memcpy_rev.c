@@ -1,41 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_memcpy_rev.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wasman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/24 19:07:47 by wasman            #+#    #+#             */
-/*   Updated: 2016/09/27 13:31:02 by wasman           ###   ########.fr       */
+/*   Created: 2016/09/26 17:39:01 by wasman            #+#    #+#             */
+/*   Updated: 2016/09/27 14:13:56 by wasman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *s)
+void	*ft_memcpy_rev(void *dst, const void *src, size_t n)
 {
-	int	nbr;
-	int	sign;
-	int	i;
+	char		*ndst;
+	const char	*nsrc;
 
-	i = 0;
-	nbr = 0;
-	sign = 1;
-	while (ft_isspaces(s[i]))
-		s++;
-	if (s[i] == '-')
+	ndst = (char *)dst;
+	nsrc = (const char *)src;
+	if (n == 0 || dst == src)
+		return (dst);
+	while (n > 0)
 	{
-		i++;
-		sign = (sign * -1);
+		ndst[n] = nsrc[n];
+		n--;
 	}
-	if (s[i] == '+')
-	{
-		i++;
-	}
-	while (ft_isdigit(s[i]))
-	{
-		nbr = (nbr * 10) + (s[i] - '0');
-		i++;
-	}
-	return (nbr * sign);
+	return (dst);
 }

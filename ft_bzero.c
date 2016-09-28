@@ -1,41 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wasman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/24 19:07:47 by wasman            #+#    #+#             */
-/*   Updated: 2016/09/27 13:31:02 by wasman           ###   ########.fr       */
+/*   Created: 2016/09/27 10:19:23 by wasman            #+#    #+#             */
+/*   Updated: 2016/09/27 13:54:58 by wasman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *s)
+void	ft_bzero(void *s, size_t n)
 {
-	int	nbr;
-	int	sign;
-	int	i;
+	size_t			i;
+	unsigned char	*ns;
 
+	ns = (unsigned char *)s;
 	i = 0;
-	nbr = 0;
-	sign = 1;
-	while (ft_isspaces(s[i]))
-		s++;
-	if (s[i] == '-')
+	if (n == 0)
+		;
+	while (i < n)
 	{
-		i++;
-		sign = (sign * -1);
-	}
-	if (s[i] == '+')
-	{
+		ns[i] = 0;
 		i++;
 	}
-	while (ft_isdigit(s[i]))
-	{
-		nbr = (nbr * 10) + (s[i] - '0');
-		i++;
-	}
-	return (nbr * sign);
 }
