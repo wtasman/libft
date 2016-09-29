@@ -1,38 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wasman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/28 22:50:25 by wasman            #+#    #+#             */
-/*   Updated: 2016/09/29 13:15:29 by wasman           ###   ########.fr       */
+/*   Created: 2016/09/29 11:24:15 by wasman            #+#    #+#             */
+/*   Updated: 2016/09/29 13:02:21 by wasman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strstr(const char *big, const char *little)
+char	*ft_strtrim(char const *s)
 {
 	size_t	i;
-	size_t	j;
 	size_t	len;
+	char	*cpy;
 
 	i = 0;
-	j = 0;
-	len = ft_strlen(little);
-	if (!len)
-		return (char *)(big);
-	while (big[i])
-	{
-		j = 0;
-		while (big[i + j] == little[j])
-		{
-			if (j == len - 1)
-				return ((char *)big + i);
-			j++;
-		}
+	len  = ft_strlen(s);
+	if (s == NULL)
+		return (NULL);
+	while (ft_isspaces(s[i]))
 		i++;
+	while (ft_isspaces(s[len]))
+		len--;		
+	len -= i;
+	cpy = ft_memalloc(len + 1);
+	if (cpy == NULL)
+		return (NULL);
+	while (len > 0)
+	{
+		*cpy++ = s[i++];
+		len--;
 	}
-	return (NULL);
+	*cpy = '\0';
+	return (cpy);
 }
