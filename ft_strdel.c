@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wasman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/26 00:19:55 by wasman            #+#    #+#             */
-/*   Updated: 2016/09/28 18:09:53 by wasman           ###   ########.fr       */
+/*   Created: 2016/09/28 12:48:45 by wasman            #+#    #+#             */
+/*   Updated: 2016/09/28 12:59:43 by wasman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+void	ft_strdel(char **as)
 {
-	size_t			i;
-	unsigned char	*nb;
-
-	i = 0;
-	nb = (unsigned char *)b;
-	while (i < len)
-	{
-		nb[i] = c;
-		i++;
-	}
-	return (b);
+	free(*as);
+	*as = NULL;
 }

@@ -3,3 +3,4 @@ https://github.com/CppCon/CppCon2015
 https://www.youtube.com/watch?v=Y8YVSohnlgY
 https://www.youtube.com/watch?v=y8-17FyYesM
 http://programmers.stackexchange.com/questions/72761/how-do-you-identify-edge-cases-on-algorithms
+https://www.sudo.ws/todd/papers/strlcpy.html

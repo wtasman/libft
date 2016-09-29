@@ -6,7 +6,7 @@
 /*   By: wasman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/27 17:11:49 by wasman            #+#    #+#             */
-/*   Updated: 2016/09/27 22:16:27 by wasman           ###   ########.fr       */
+/*   Updated: 2016/09/28 13:27:17 by wasman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,5 @@ char	*ft_strdup(const char *s1)
 	if (s2 == NULL)
 		return (0);
 	ft_memcpy(s2, s1, len);
-	s2[len] = '\0';
 	return (s2);
 }
