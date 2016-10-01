@@ -6,7 +6,7 @@
 /*   By: wasman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/27 17:13:53 by wasman            #+#    #+#             */
-/*   Updated: 2016/09/27 22:08:15 by wasman           ###   ########.fr       */
+/*   Updated: 2016/09/30 14:20:13 by wasman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memalloc(size_t size)
 	int		i;
 	void	*new;
 
-	new = (char *)malloc(sizeof(new) * size);
+	new = (void*)malloc(sizeof(void) * size);
 	i = 0;
 	if (!new || size == 0)
 		return (NULL);
