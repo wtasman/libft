@@ -1,38 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wasman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/29 13:22:02 by wasman            #+#    #+#             */
-/*   Updated: 2016/10/01 20:05:46 by wasman           ###   ########.fr       */
+/*   Created: 2016/09/30 23:08:54 by wasman            #+#    #+#             */
+/*   Updated: 2016/10/01 12:47:44 by wasman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+int	ft_itoa(int n)
 {
-	size_t	i;
-	size_t	j;
-	size_t	lit;
+	/*char	*str;*/
+	int		len;
 
-	i = 0;
-	j = 0;
-	lit = ft_strlen(little);
-	if (!lit)
-		return (char *)(big);
-	while (big[i])
-	{
-		j = 0;
-		while (big[i + j] == little[j] && i + j < len)
-		{
-			if (j == lit - 1)
-				return ((char *)big + i);
-			j++;
-		}
-		i++;
-	}
-	return (NULL);
+	len = 1;
+	while (n /= 10)
+		len++;
+	/*str = ft_strnew(len);*/
+	return (len);
 }

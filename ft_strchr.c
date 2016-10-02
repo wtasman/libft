@@ -6,7 +6,7 @@
 /*   By: wasman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/28 22:06:15 by wasman            #+#    #+#             */
-/*   Updated: 2016/09/28 22:39:10 by wasman           ###   ########.fr       */
+/*   Updated: 2016/10/01 20:05:29 by wasman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ char	*ft_strchr(const char *s, int c)
 		i++;
 	}
 	if (c == '\0')
-		return(&str[i]);
+		return (&str[i]);
 	return (NULL);
 }

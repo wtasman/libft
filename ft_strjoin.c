@@ -1,38 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wasman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/29 13:22:02 by wasman            #+#    #+#             */
-/*   Updated: 2016/10/01 20:05:46 by wasman           ###   ########.fr       */
+/*   Created: 2016/09/30 21:41:07 by wasman            #+#    #+#             */
+/*   Updated: 2016/09/30 22:00:58 by wasman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	i;
-	size_t	j;
-	size_t	lit;
+	char	*str;
+	int		i;
 
+	if (!s1 || !s2)
+		return (NULL);
 	i = 0;
-	j = 0;
-	lit = ft_strlen(little);
-	if (!lit)
-		return (char *)(big);
-	while (big[i])
-	{
-		j = 0;
-		while (big[i + j] == little[j] && i + j < len)
-		{
-			if (j == lit - 1)
-				return ((char *)big + i);
-			j++;
-		}
-		i++;
-	}
-	return (NULL);
+	str = ft_strnew(ft_strlen(s1) + ft_strlen(s2));
+	str = ft_strncat((char *)s1, s2, ft_strlen(s1));
+	if (str == NULL)
+		return (NULL);
+	return (str);
 }

@@ -66,7 +66,11 @@ SOURCES =	ft_putchar.c\
 			ft_striter.c\
 			ft_striteri.c\
 			ft_strmap.c\
-			ft_strmapi.c
+			ft_strmapi.c\
+			ft_strjoin.c\
+			ft_strsub.c\
+			ft_itoa.c\
+			ft_isspace.c
 
 OBJ =	$(SOURCES:.c=.o)
 

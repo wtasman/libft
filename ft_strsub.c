@@ -1,38 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wasman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/29 13:22:02 by wasman            #+#    #+#             */
-/*   Updated: 2016/10/01 20:05:46 by wasman           ###   ########.fr       */
+/*   Created: 2016/09/30 22:41:11 by wasman            #+#    #+#             */
+/*   Updated: 2016/09/30 23:00:09 by wasman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	size_t	i;
-	size_t	j;
-	size_t	lit;
+	char	*str;
+	int		i;
 
 	i = 0;
-	j = 0;
-	lit = ft_strlen(little);
-	if (!lit)
-		return (char *)(big);
-	while (big[i])
+	str = ft_strnew(len);
+	if (str == NULL)
+		return (NULL);
+	while (len > 0)
 	{
-		j = 0;
-		while (big[i + j] == little[j] && i + j < len)
-		{
-			if (j == lit - 1)
-				return ((char *)big + i);
-			j++;
-		}
+		str[i] = s[start];
 		i++;
+		start++;
+		len--;
 	}
-	return (NULL);
+	str[i] = '\0';
+	return (str);
 }
