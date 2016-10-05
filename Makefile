@@ -69,8 +69,17 @@ SOURCES =	ft_putchar.c\
 			ft_strmapi.c\
 			ft_strjoin.c\
 			ft_strsub.c\
+			ft_isspace.c\
 			ft_itoa.c\
-			ft_isspace.c
+			ft_isspace.c\
+			ft_wordcount.c\
+			ft_strsplit.c\
+			ft_lstnew.c\
+			#ft_lstdelone.c\
+			ft_lstdel.c\
+			ft_lstiter.c\
+			ft_lstadd.c\
+			ft_lstmap.c#
 
 OBJ =	$(SOURCES:.c=.o)
 
@@ -100,7 +109,7 @@ clean: all
 clr:
 	/bin/rm -rf a.out
 
-fclean: clean clr
+fclean: clean
 	/bin/rm -f rm $(NAME)
 
 re: fclean all

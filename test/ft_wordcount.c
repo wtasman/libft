@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_wordcount.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wasman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/27 17:11:49 by wasman            #+#    #+#             */
-/*   Updated: 2016/10/04 18:04:10 by wasman           ###   ########.fr       */
+/*   Created: 2016/10/03 11:20:21 by wasman            #+#    #+#             */
+/*   Updated: 2016/10/03 18:45:01 by wasman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+void	test_ft_wordcount(void)
 {
-	size_t	len;
-	char	*s2;
+	char str[] = "**Torrey**Has**Three**Letters**";
+	int	i;
 
-	len = ft_strlen(s1);
-	s2 = ft_memalloc(len + 1);
-	if (s2 == NULL)
-		return (0);
-	ft_memcpy(s2, s1, len);
-	return (s2);
+	i = ft_wordcount(str, '*');
+	ft_putnbr(i);
+}
+
+int	main()
+{
+	test_ft_wordcount();
+	return (0);
 }

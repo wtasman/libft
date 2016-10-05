@@ -6,7 +6,7 @@
 /*   By: wasman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/01 01:00:30 by wasman            #+#    #+#             */
-/*   Updated: 2016/10/01 12:35:05 by wasman           ###   ########.fr       */
+/*   Updated: 2016/10/01 23:07:33 by wasman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,18 @@
 
 int	test_ft_itoa(void)
 {
-	return (ft_itoa(1234567));
+	int	i;
+
+	i = ft_itoa(55555);
+	return (i);
 }
 
 int	main()
 {
-	ft_putnbr(test_ft_itoa());
+	int	i;
+	
+	i = test_ft_itoa();
+	ft_putnbr(i);
+	ft_putchar('\n');
 	return (0);
 }

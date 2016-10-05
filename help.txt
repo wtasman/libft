@@ -4,3 +4,4 @@ https://www.youtube.com/watch?v=Y8YVSohnlgY
 https://www.youtube.com/watch?v=y8-17FyYesM
 http://programmers.stackexchange.com/questions/72761/how-do-you-identify-edge-cases-on-algorithms
 https://www.sudo.ws/todd/papers/strlcpy.html
+http://stackoverflow.com/questions/5437134/test-cases-for-a-singly-linked-list

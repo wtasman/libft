@@ -1,26 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wasman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/27 17:11:49 by wasman            #+#    #+#             */
-/*   Updated: 2016/10/04 18:04:10 by wasman           ###   ########.fr       */
+/*   Created: 2016/10/03 01:31:33 by wasman            #+#    #+#             */
+/*   Updated: 2016/10/04 20:00:38 by wasman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char	**ft_strsplit(char *s, char c)
 {
-	size_t	len;
-	char	*s2;
+	char	**array;
+	int		i;
+	int		j;
+	int		words;
 
-	len = ft_strlen(s1);
-	s2 = ft_memalloc(len + 1);
-	if (s2 == NULL)
-		return (0);
-	ft_memcpy(s2, s1, len);
-	return (s2);
+	words = ft_wordcount(s, c);
+	array = (char**)malloc(sizeof(char *) * words);
+	i = 0;
+	while (i < words)
+	{
+		j = 0;
+		while (s[j] != '\0')
+		{
+			while (s[j] == c)
+				j++;
+			i++;
+			while (s[j] != c)
+				j++;
+		}	
+		array[i] = (char *)malloc(sizeof(char));
+	}
+	return(array);
 }
