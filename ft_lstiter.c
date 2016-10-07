@@ -6,7 +6,7 @@
 /*   By: wasman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/03 01:52:02 by wasman            #+#    #+#             */
-/*   Updated: 2016/10/03 01:57:47 by wasman           ###   ########.fr       */
+/*   Updated: 2016/10/05 16:13:27 by wasman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,9 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-	return (0);
+	while (lst)
+	{
+		f(lst);
+		lst = lst->next;
+	}
 }

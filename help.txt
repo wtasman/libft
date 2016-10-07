@@ -5,3 +5,6 @@ https://www.youtube.com/watch?v=y8-17FyYesM
 http://programmers.stackexchange.com/questions/72761/how-do-you-identify-edge-cases-on-algorithms
 https://www.sudo.ws/todd/papers/strlcpy.html
 http://stackoverflow.com/questions/5437134/test-cases-for-a-singly-linked-list
+https://www.careercup.com/question?id=8253769
+http://www.c4learn.com/data-structure/linked-list-tutorials-with-c-programming/
+http://www.cprogramming.com/tutorial/c/lesson15.html

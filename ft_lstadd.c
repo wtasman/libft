@@ -6,7 +6,7 @@
 /*   By: wasman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/03 01:54:01 by wasman            #+#    #+#             */
-/*   Updated: 2016/10/03 01:55:27 by wasman           ###   ########.fr       */
+/*   Updated: 2016/10/05 16:44:14 by wasman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 void	ft_lstadd(t_list **alst, t_list *new)
 {
-	return (0);
+	if (*alst)
+		new->next = *alst;
+	*alst = new;
 }

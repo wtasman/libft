@@ -6,7 +6,7 @@
 /*   By: wasman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 09:25:16 by wasman            #+#    #+#             */
-/*   Updated: 2016/10/03 11:57:28 by wasman           ###   ########.fr       */
+/*   Updated: 2016/10/05 16:18:41 by wasman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,12 +81,13 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_itoa(int n);
 int		ft_isspace(char);
 int		ft_wordcount(char *s, char c);
+char	*ft_strdtrim(char const *s, char c);
 char	**ft_strsplit(char *s, char c);
 t_list	*ft_lstnew(void const *content, size_t content_size);
 void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void	ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void	ft_lstadd(t_list **alst, t_list *new);
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
-t_list	ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 #endif

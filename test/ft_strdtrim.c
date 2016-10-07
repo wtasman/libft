@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_strdtrim.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wasman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/29 15:50:16 by wasman            #+#    #+#             */
-/*   Updated: 2016/10/06 10:50:32 by wasman           ###   ########.fr       */
+/*   Created: 2016/10/05 10:28:26 by wasman            #+#    #+#             */
+/*   Updated: 2016/10/05 10:41:50 by wasman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int i, char *))
+int	main()
 {
-	int	i;
-
-	i = 0;
-	if (!s || !f)
-		return ;
-	while (*s)
-		f(i++, s++);
+	char	*cpy;
+	char	str[] = "***THIS**IS**A**STRING****";
+	cpy = ft_strdtrim(str, '*');
+	ft_putstr(cpy);
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: wasman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/30 22:41:11 by wasman            #+#    #+#             */
-/*   Updated: 2016/09/30 23:00:09 by wasman           ###   ########.fr       */
+/*   Updated: 2016/10/06 10:49:45 by wasman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	int		i;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	str = ft_strnew(len);
 	if (str == NULL)
 		return (NULL);

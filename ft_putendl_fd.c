@@ -6,7 +6,7 @@
 /*   By: wasman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/24 11:59:18 by wasman            #+#    #+#             */
-/*   Updated: 2016/09/26 11:28:05 by wasman           ###   ########.fr       */
+/*   Updated: 2016/10/06 10:54:17 by wasman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putendl_fd(char const *s, int fd)
 {
+	if (!s || !fd)
+		return ;
 	ft_putstr_fd(s, fd);
 	ft_putchar_fd('\n', fd);
 }

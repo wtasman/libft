@@ -6,7 +6,7 @@
 /*   By: wasman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/28 11:47:37 by wasman            #+#    #+#             */
-/*   Updated: 2016/09/28 11:50:42 by wasman           ###   ########.fr       */
+/*   Updated: 2016/10/06 10:43:54 by wasman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 int	ft_strequ(char const *s1, char const *s2)
 {
+	if (!s1 || !s2)
+		return (0);
 	if (ft_strcmp(s1, s2) == 0)
 		return (1);
 	return (0);

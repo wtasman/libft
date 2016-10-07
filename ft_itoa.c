@@ -6,38 +6,51 @@
 /*   By: wasman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/30 23:08:54 by wasman            #+#    #+#             */
-/*   Updated: 2016/10/02 13:39:47 by wasman           ###   ########.fr       */
+/*   Updated: 2016/10/07 11:59:46 by wasman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+char	*ft_intstr(int n, int len)
+{
+	char	*str;
+
+	str = ft_strnew(len);
+	if (!str)
+		return (NULL);
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	while (len--)
+	{
+		str[len] = (n % 10 + '0');
+		n = n / 10;
+	}
+	return (str);
+}
+
 char	*ft_itoa(int n)
 {
 	char	*str;
 	int		len;
-	int		sign;
+	int		nn;
 	int		i;
 
 	len = 1;
-	while (n /= 10)
-		len++;
-	str = (char*)malloc(sizeof(char) * (len + 2));
-	if (str == NULL)
-		return (NULL);
-	sign = 1;
+	i = 0;
 	if (n < 0)
 	{
-		sign = -sign;
-		n = -n;
+		i = 1;
+		n *= -1;
 	}
-	i = 0;
-	while (n > 10)
-		str[++i] = ((n % 10) + '0');
-		n /= 10;
-	str = ft_strrev(str);
-	if (sign < 0)
+	nn = n;
+	while (nn /= 10)
+		len++;
+	len += i;
+	str = ft_intstr(n, len);
+	if (!str)
+		return (NULL);
+	if (i)
 		str[0] = '-';
-	str[len + 2] = '\0';
 	return (str);
 }
