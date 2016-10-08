@@ -6,7 +6,7 @@
 /*   By: wasman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/27 10:49:36 by wasman            #+#    #+#             */
-/*   Updated: 2016/09/27 16:45:24 by wasman           ###   ########.fr       */
+/*   Updated: 2016/10/07 14:51:08 by wasman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,9 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	nsrc = (const char *)src;
 	while (i < n)
 	{
-		ndst[i] = nsrc[i];
+		if ((*ndst++ = *nsrc++) == c)
+			return (ndst);
 		i++;
-		if (nsrc[i] == c)
-		{
-			ndst[i] = nsrc[i];
-			i++;
-			return ((void *)&ndst[i]);
-		}
 	}
 	return (NULL);
 }
