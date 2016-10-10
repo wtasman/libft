@@ -84,31 +84,20 @@ SOURCES =	ft_putchar.c\
 
 OBJ =	$(SOURCES:.c=.o)
 
-TESTS = test/$(SOURCES)
-
-.PHONY: all build norm testit clean clr fclean re
-
-all: $(NAME)
+.PHONY: all norm clean fclean re
 
 $(NAME):
 	$(CC) -c $(CFLAGS) $(SOURCES)
 	$(BLDLIB) $(NAME) $(OBJ)
 	$(SORT) $(NAME)
 
-build: all
-	$(CC) $(CFLAGS) $(NAME)
+all: $(NAME)
 
 norm: fclean
 	norminette $(SOURCES)
 
-testit: all build
-	./a.out
-
-clean: all
+clean:
 	/bin/rm -f $(OBJ)
-
-clr:
-	/bin/rm -rf a.out
 
 fclean: clean
 	/bin/rm -f rm $(NAME)
