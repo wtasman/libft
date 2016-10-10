@@ -80,7 +80,9 @@ SOURCES =	ft_putchar.c\
 			ft_lstdel.c\
 			ft_lstiter.c\
 			ft_lstadd.c\
-			ft_lstmap.c
+			ft_lstmap.c\
+			ft_isupper.c\
+			ft_islower.c
 
 OBJ =	$(SOURCES:.c=.o)
 
