@@ -6,16 +6,18 @@
 /*   By: wasman <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 09:25:16 by wasman            #+#    #+#             */
-/*   Updated: 2016/10/10 02:26:25 by wasman           ###   ########.fr       */
+/*   Updated: 2016/11/22 15:59:38 by wasman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# define BUFF_SIZE 1
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
+# include <fcntl.h>
 
 typedef struct		s_list
 {
@@ -91,5 +93,7 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_isupper(int c);
 int					ft_islower(int c);
+t_list				*ft_sort_list(t_list* lst, int (*cmp)(void *, void *));
+int					get_next_line(int fd, char **line);
 
 #endif
